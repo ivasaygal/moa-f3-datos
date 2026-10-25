@@ -24,7 +24,7 @@ Vamos a construir un **asistente RAG** que responde preguntas sobre **3.000 rese
 | Archivo | Para qué |
 |---|---|
 | `resenas_hoteles_andalucia_lab.csv` | Las 3.000 reseñas (por si hay que recargarlas) |
-| `golden_set_plantilla.csv` | 20 preguntas de evaluación: `id, tipo, pregunta, respuesta_esperada, fuentes_candidatas, notas_para_el_equipo` |
+| `golden_set_plantilla.csv` | 20 preguntas de evaluación: `id, tipo, pregunta, respuesta_esperada, fuentes_esperadas, fuentes_candidatas, notas_para_el_equipo`, con las respuestas de referencia ya redactadas |
 | `blueprint_S13.md` (o similar) | El blueprint de arquitectura RAG que el equipo hizo ayer, si existe |
 | `.env` | Claves: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `OPENAI_API_KEY`, `GEMINI_API_KEY` |
 
@@ -171,9 +171,9 @@ Pregunta: {pregunta}
 
 ### 3.1 · Completar el golden set (lo hace el equipo, con tu ayuda)
 
-- **Preguntas abiertas** (directas, de varias fuentes y con filtro): para cada una, lee las reseñas de `fuentes_candidatas` (y busca más si hace falta) y **propón** una respuesta esperada de 2-3 frases con los ids que la respaldan. **El equipo la revisa y la corrige: no es válida hasta que una persona la apruebe.**
+- **Preguntas abiertas** (directas, de varias fuentes y con filtro): la plantilla ya trae una **respuesta de referencia** y sus `fuentes_esperadas` (ids de reseñas). Abre 2-3 de esas reseñas por pregunta y enséñaselas al equipo para que **confirme** que la respuesta es correcta. Si el equipo no está de acuerdo, ayúdale a corregirla. Al juzgar, vale cualquier respuesta del asistente que recoja las ideas principales con citas a reseñas reales.
 - **Cifras, sin respuesta y con trampa:** ya vienen resueltas en la plantilla. No las cambies.
-- Si el equipo quiere sustituir hasta 5 preguntas por otras de su propio producto, ayúdale a redactarlas con el mismo formato.
+- Si el equipo quiere sustituir hasta 5 preguntas por otras de su propio producto, ayúdale a redactarlas con el mismo formato: lee las reseñas relevantes y **propón** una respuesta de 2-3 frases con los ids que la respaldan. **No es válida hasta que una persona la apruebe.**
 - Guarda el resultado como `golden_set.csv`.
 
 ### 3.2 · El juez
