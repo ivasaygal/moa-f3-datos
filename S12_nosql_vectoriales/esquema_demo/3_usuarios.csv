@@ -1,0 +1,17 @@
+id,cadena_id,nombre,email,rol
+1,1,Julia Navarro,julia.navarro1@grupoazahar.example.com,admin
+2,1,Adrián Jiménez,adrian.jimenez2@grupoazahar.example.com,analista
+3,1,Raúl Jiménez,raul.jimenez3@grupoazahar.example.com,analista
+4,1,Javier Romero,javier.romero4@grupoazahar.example.com,lector
+5,2,Elena Torres,elena.torres5@costaluzhoteles.example.com,admin
+6,2,Lucía Rubio,lucia.rubio6@costaluzhoteles.example.com,analista
+7,2,Manuel Ortega,manuel.ortega7@costaluzhoteles.example.com,analista
+8,2,Raúl Navarro,raul.navarro8@costaluzhoteles.example.com,lector
+9,3,Noelia García,noelia.garcia9@sierraymar.example.com,admin
+10,3,Pablo Molina,pablo.molina10@sierraymar.example.com,analista
+11,3,Raúl Romero,raul.romero11@sierraymar.example.com,analista
+12,3,Pablo García,pablo.garcia12@sierraymar.example.com,lector
+13,4,Daniel García,daniel.garcia13@patioandaluz.example.com,admin
+14,4,Javier López,javier.lopez14@patioandaluz.example.com,analista
+15,4,Javier Jiménez,javier.jimenez15@patioandaluz.example.com,analista
+16,4,Julia Romero,julia.romero16@patioandaluz.example.com,lector
