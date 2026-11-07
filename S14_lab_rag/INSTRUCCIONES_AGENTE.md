@@ -24,6 +24,7 @@ Vamos a construir un **asistente RAG** que responde preguntas sobre **3.000 rese
 | Archivo | Para qué |
 |---|---|
 | `resenas_hoteles_andalucia_lab.csv` | Las 3.000 reseñas (por si hay que recargarlas) |
+| `gemini_notebook/` | Las 3.000 reseñas en 4 archivos Markdown, listos para subir como fuentes a Gemini Notebook (sprint 3) |
 | `golden_set_plantilla.csv` | 20 preguntas de evaluación: `id, tipo, pregunta, respuesta_esperada, fuentes_esperadas, fuentes_candidatas, notas_para_el_equipo`, con las respuestas de referencia ya redactadas |
 | `blueprint_S13.md` (o similar) | El blueprint de arquitectura RAG que el equipo hizo ayer, si existe |
 | `.env` | Claves: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `OPENAI_API_KEY`, `GEMINI_API_KEY` |
@@ -239,7 +240,7 @@ Al final, muestra un resumen con:
 
 Esta fase la hace **el equipo a mano** en Gemini; tú ayudas a preparar y a analizar.
 
-1. **Prepara** un archivo listo para subir a Gemini Notebook con las 3.000 reseñas (id, hotel, provincia, nota, título y texto). Si hay límites de tamaño, propón cómo dividirlo.
+1. **Fuentes para Gemini Notebook:** usad los 4 archivos de `gemini_notebook/` (750 reseñas cada uno, en Markdown y con el id de cada reseña en su cabecera). **No subáis el CSV:** Gemini Notebook lo trata como una hoja de cálculo, limitada a 100.000 tokens, y lo rechaza por tamaño. Si el equipo ha cambiado el dataset, regenera los archivos con `scripts/make_notebook_sources.py`.
 2. El equipo lanza las mismas 20 preguntas en Gemini Notebook y pega las respuestas en una columna nueva, `respuesta_gemini_notebook`.
 3. **Juzga** esas respuestas con la misma rúbrica y el mismo juez, y añade sus notas al CSV.
 4. Rellena esta tabla comparativa:

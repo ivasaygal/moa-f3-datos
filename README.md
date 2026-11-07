@@ -17,7 +17,7 @@ Las claves (Supabase, OpenAI, Gemini) van **siempre** en un archivo `.env` que *
 |---|---|---|
 | [`S12_nosql_vectoriales/`](S12_nosql_vectoriales/) | S12 · NoSQL y bases de datos vectoriales (jue 12 nov) | `resenas_hoteles_andalucia_lab.csv` (3.000 reseñas) · `esquema_demo/` (cadenas → hoteles → reseñas, y cadenas → usuarios, con `schema.sql`) · instrucciones |
 | [`S13_rag_teoria/`](S13_rag_teoria/) | S13 · Sistemas RAG: teoría y arquitectura (lun 16 nov) | `rag_demo/`: 4 documentos ficticios de «Grupo Azahar Hoteles» y 6 preguntas de prueba con sus respuestas · instrucciones para diseñar el blueprint |
-| [`S14_lab_rag/`](S14_lab_rag/) | S14 · LAB: RAG construido y evaluado (mar 17 nov) | `golden_set_plantilla.csv` (20 preguntas) · `resenas_hoteles_andalucia_lab.csv` (copia) · instrucciones por sprints |
+| [`S14_lab_rag/`](S14_lab_rag/) | S14 · LAB: RAG construido y evaluado (mar 17 nov) | `golden_set_plantilla.csv` (20 preguntas con respuestas de referencia) · `resenas_hoteles_andalucia_lab.csv` (copia) · `gemini_notebook/` (las reseñas en 4 Markdown para Gemini Notebook) · instrucciones por sprints |
 | [`S15_forecasting/`](S15_forecasting/) | S15 · Forecasting con IA (mié 18 nov) | Pernoctaciones hoteleras mensuales de Andalucía y de sus 8 provincias (2010-2026) · instrucciones para Colab con Chronos-2 |
 | [`raw/`](raw/) | — | Datos originales sin procesar (ver fuentes) |
 | [`scripts/`](scripts/) | — | Scripts que generan todos los archivos a partir de `raw/` |
@@ -42,4 +42,5 @@ python scripts/make_dataset.py           # raw/Big_AHR.csv → muestra de 3.000 
 python scripts/make_schema_demo.py       # → S12_nosql_vectoriales/esquema_demo/
 python scripts/make_golden_set.py        # → S14_lab_rag/golden_set_plantilla.csv
 python scripts/make_forecast_dataset.py  # raw/ine_67190.csv → series de S15
+python scripts/make_notebook_sources.py  # → S14_lab_rag/gemini_notebook/ (reseñas en Markdown)
 ```
